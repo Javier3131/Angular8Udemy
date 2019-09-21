@@ -16,7 +16,16 @@ export class RecipeService {
                 new Ingredient('pasta', 2),
                 new Ingredient('another ingredient', 4)
             ]
-        )];
+        ),
+        new Recipe("Pasta",
+            "A pasta",
+            "https://ep01.epimg.net/elcomidista/imagenes/2018/06/26/receta/1530022065_262773_1530523801_media_normal.jpg",
+            [
+                new Ingredient('cheese', 5),
+                new Ingredient('another ingredient', 1)
+            ]
+        )
+    ];
 
     constructor(private slService: ShoppingListService) { }
 
@@ -26,5 +35,9 @@ export class RecipeService {
 
     addIngredientsToShoppingList(ingredients: Ingredient[]) {
         this.slService.addIngridients(ingredients);
+    }
+
+    getRecipe(id: number) {
+        return this.recipes[id];
     }
 }
