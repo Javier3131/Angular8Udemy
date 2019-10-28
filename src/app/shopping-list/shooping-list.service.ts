@@ -1,22 +1,12 @@
 // import { EventEmitter } from '@angular/core';
 import { Subject } from "rxjs";
 import { Ingredient } from '../shared/ingredient.model';
-<<<<<<< HEAD
-
-
-export class ShoppingListService {
-
-    // ingredientsChanged = new EventEmitter<Ingredient[]>();
-    ingredientsChanged = new Subject<Ingredient[]>();
-=======
 import { EventEmitter } from '@angular/core';
-import { Subject } from 'rxjs';
 
 export class ShoppingListService {
 
     ingredientsChanged = new EventEmitter<Ingredient[]>();
     startedEditing = new Subject<number>();
->>>>>>> a50bc3853a44cd1034edfccc6c930c034abcef85
 
     private ingredients: Ingredient[] = [
         new Ingredient('Apples', 5),
